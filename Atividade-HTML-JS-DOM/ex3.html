@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+
+    <style>
+        .comp {
+
+            font-weight: bold;
+        }
+
+        .con{
+
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <label for="inputPont">
+
+        Pontuação mínima:
+    </label>
+
+    <input type="number" id="inputPont" />
+
+
+    <p class="comp">Competidor 1</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot1">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot2">
+
+    <p class="comp">Competidor 2</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot3">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot4">
+
+    <p class="comp">Competidor 3</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot5">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot6">
+
+    <p class="comp">Competidor 4</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot7">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot8">
+
+    <p class="comp">Competidor 5</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot9">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot10">
+
+    <p class="comp">Competidor 6</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot11">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot12">
+
+    <p class="comp">Competidor 7</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot13">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot14">
+
+    <p class="comp">Competidor 8</p>
+
+    <label for="inputNot">
+        Nota Prova 1:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot15">
+
+    </br>
+
+    <label for="inputNot">
+        Nota Prova 2:
+    </label>
+
+    </br>
+
+    <input type="number" id="inputNot16">
+
+    </br>
+    </br>
+
+    <button type="button" onclick="calcular()">
+        Calcular
+    </button>
+
+    <h1 id="inval"></h1>
+
+    <h1 class="con" id="convs"></h1>
+
+    <script>
+
+        function calcular() {
+
+            let inputPont = document.getElementById("inputPont");
+            let inputNot1 = document.getElementById("inputNot1");
+            let inputNot2 = document.getElementById("inputNot2");
+            let inputNot3 = document.getElementById("inputNot3");
+            let inputNot4 = document.getElementById("inputNot4");
+            let inputNot5 = document.getElementById("inputNot5");
+            let inputNot6 = document.getElementById("inputNot6");
+            let inputNot7 = document.getElementById("inputNot7");
+            let inputNot8 = document.getElementById("inputNot8");
+            let inputNot9 = document.getElementById("inputNot9");
+            let inputNot10 = document.getElementById("inputNot10");
+            let inputNot11 = document.getElementById("inputNot11");
+            let inputNot12 = document.getElementById("inputNot12");
+            let inputNot13 = document.getElementById("inputNot13");
+            let inputNot14 = document.getElementById("inputNot14");
+            let inputNot15 = document.getElementById("inputNot15");
+            let inputNot16 = document.getElementById("inputNot16");
+
+            let pont = parseInt(inputPont.value);
+            let nota1 = parseInt(inputNot1.value);
+            let nota2 = parseInt(inputNot2.value);
+            let nota3 = parseInt(inputNot3.value);
+            let nota4 = parseInt(inputNot4.value);
+            let nota5 = parseInt(inputNot5.value);
+            let nota6 = parseInt(inputNot6.value);
+            let nota7 = parseInt(inputNot7.value);
+            let nota8 = parseInt(inputNot8.value);
+            let nota9 = parseInt(inputNot9.value);
+            let nota10 = parseInt(inputNot10.value);
+            let nota11 = parseInt(inputNot11.value);
+            let nota12 = parseInt(inputNot12.value);
+            let nota13 = parseInt(inputNot13.value);
+            let nota14 = parseInt(inputNot14.value);
+            let nota15 = parseInt(inputNot15.value);
+            let nota16 = parseInt(inputNot16.value);
+
+            let inval = document.getElementById("inval");
+            let convs = document.getElementById("convs");
+
+            if (isNaN(pont) || pont < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+
+            } else if (isNaN(nota1) || nota1 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+
+            } else if (isNaN(nota2) || nota2 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota3) || nota3 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota4) || nota4 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota5) || nota5 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota6) || nota6 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota7) || nota7 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota8) || nota8 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota9) || nota9 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota10) || nota10 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota11) || nota11 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota12) || nota12 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota13) || nota13 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota14) || nota14 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota15) || nota15 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            } else if (isNaN(nota16) || nota16 < 0) {
+
+                inval.textContent = "Número(s) inválido(s)!";
+
+                return;
+            }
+
+            if (nota1 + nota2 >= pont) {
+
+                convs.innerHTML = "Competidor 1 foi convidado!";
+
+            }
+
+
+            if (nota3 + nota4 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 2 foi convidado!";
+
+
+            }
+
+            if (nota5 + nota6 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 3 foi convidado!";
+
+
+            }
+
+            if (nota7 + nota8 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 4 foi convidado!";
+
+
+            }
+
+            if (nota9 + nota10 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 5 foi convidado!";
+
+
+            }
+
+            if (nota11 + nota12 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 6 foi convidado!";
+
+
+            }
+
+            if (nota13 + nota14 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 7 foi convidado!";
+
+
+            }
+
+            if (nota15 + nota16 >= pont) {
+
+                convs.innerHTML += "<br>Competidor 8 foi convidado!";
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

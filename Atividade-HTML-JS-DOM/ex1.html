@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+
+    <style>
+        .cr {
+
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .forma{
+
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="forma">
+
+        <h1 class="cr">
+            Crie seu jogo!
+        </h1>
+
+        <label for="inputNome">
+            Nome:
+        </label>
+
+        </br>
+
+        <input type="text" id="inputNome">
+
+        </br>
+
+        <label for="inputDesc">
+            Descrição:
+        </label>
+
+        </br>
+
+        <input type="text" id="inputDesc">
+
+        </br>
+
+        <label for="inputProd">
+            Produtora:
+        </label>
+
+        </br>
+
+        <input type="text" id="inputProd">
+
+        </br>
+
+        <label for="inputAno">
+            Ano:
+        </label>
+
+        </br>
+
+        <input type="number" id="inputAno">
+
+        </br>
+
+        <label for="inputIdade">
+            Idade mínima:
+        </label>
+
+        </br>
+
+        <input type="number" id="inputIdade">
+
+        </br>
+        </br>
+
+        <button type="button" onclick="criar()">
+            Criar jogo
+        </button>
+
+        <h1 id="erro"></h1>
+
+    </div>
+
+    <script>
+
+        async function criar() {
+
+
+            let inputNome = document.getElementById("inputNome")
+
+            let inputDesc = document.getElementById("inputDesc");
+
+            let inputProd = document.getElementById("inputProd");
+
+            let inputAno = document.getElementById("inputAno");
+
+            let inputIdade = document.getElementById("inputIdade");
+
+            let nome = inputNome.value;
+
+            let descricao = inputDesc.value;
+
+            let produtora = inputProd.value;
+
+            let ano = parseInt(inputAno.value);
+
+            let idadeMinima = parseInt(inputIdade.value);
+
+            let erro = document.getElementById("erro");
+
+
+            if (nome==="") {
+
+                erro.textContent = "Campo(s) inválido(s)!"
+
+
+            } else if (descricao==="") {
+
+                erro.textContent = "Campo(s) inválido(s)!"
+
+
+            } else if (produtora==="") {
+
+                erro.textContent = "Campo(s) inválido(s)!"
+
+
+            } else if (isNaN(ano) || ano < 0 || ano > 2022) {
+
+                erro.textContent = "Campo(s) inválido(s)!"
+
+
+            } else if (isNaN(idadeMinima) || idadeMinima < 1 || idadeMinima > 120) {
+
+                erro.textContent = "Campo(s) inválido(s)!"
+
+
+            }
+
+            if (true) {
+
+                try {
+
+                    let jogo = {
+
+                        "nome": nome,
+                        "descricao": descricao,
+                        "produtora": produtora,
+                        "ano": ano,
+                        "idadeMinima": idadeMinima
+                    };
+
+                    let opcoes = {
+
+                        method: "POST",
+                        body: JSON.stringify(jogo),
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    };
+
+                    let res = await fetch("https://academico.espm.br/testeapi/jogo/criar", opcoes);
+
+                    if (!res.ok) {
+                        alert("Erro ao criar jogo");
+                    } else {
+                        alert("Jogo criado com sucesso");
+                    }
+
+                } catch (excecao) {
+                    // Ocorreu um erro de rede!
+                    alert("Erro de rede: " + excecao.message);
+                }
+
+
+
+
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
